@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+
+a{
+    text-decoration: none;
+    color:black;
+}
+
+
+.nav-link1{
+    padding: 0 10px;
+    font-family: bold;
+    font-weight: bold;
+}
+
+
+.nav-link2{
+    padding: 0 10px;
+    color: rgb(92, 92, 92);
+    font-family: bold;
+}
+
+
+
+.nav-link3{
+    padding: 0 10px;
+    font-family: bold;
+}
+
+
+
+.cont1{
+    padding:10px 0;
+    border-bottom: 1px solid rgb(199, 198, 198);
+}
+
+
+
+.cont2{
+    padding:10px 0;
+    border-bottom: 1px solid rgb(199, 198, 198);
+
+}
+
+
+
+.cont3{
+    padding:10px 0;
+}

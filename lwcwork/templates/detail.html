@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'js/bootstrap.js' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <div class="cont1">
+        <a class="nav-link1" aria-current="page" href="{% url 'local' %}">O'zbekiston</a>
+        <a class="nav-link1" aria-current="page" href="{% url 'glob' %}">Jahon</a>
+
+        {% for i in categories %}
+
+        <a class="nav-link1" aria-current="page" href="{% url 'cat_filter' i.slug %}">{{i.name}}</a>
+
+        {% endfor %}
+
+    </div>
+
+
+
+    <div class="cont2">
+
+        {% for i in rgn %}
+
+        <a class="nav-link2" aria-current="page" href="{% url 'region' i.slug %}">{{i.name}}</a>|
+
+        {% endfor %}
+    </div>
+
+    <div class="cont3">
+
+        {% for i in hash %}
+
+        <a class="nav-link3" aria-current="page" href="{% url 'hash_filter' i.slug %}">{{i.name}}</a>
+
+        {% endfor %}
+    </div>
+
+    <div>
+        <h5 class="card-title">{{object.title}}</h5>
+
+        <img src="{{object.image.url}}" class="card-img-top">
+
+        <h6>{{object.description}}</h6>
+    </div>
+    <!-- ******************************************************************************** -->
+    <style>
+        a{
+        text-decoration: none;
+        color:black;
+    }
+    
+    
+    .nav-link1{
+        padding: 0 10px;
+        font-family: bold;
+        font-weight: bold;
+    }
+    
+    
+    .nav-link2{
+        padding: 0 10px;
+        color: rgb(92, 92, 92);
+        font-family: bold;
+    }
+    
+    
+    
+    .nav-link3{
+        padding: 0 10px;
+        font-family: bold;
+    }
+    
+    
+    
+    .cont1{
+        padding:10px 0;
+        border-bottom: 1px solid rgb(199, 198, 198);
+    }
+    
+    
+    
+    .cont2{
+        padding:10px 0;
+        border-bottom: 1px solid rgb(199, 198, 198);
+    
+    }
+    
+    
+    
+    .cont3{
+        padding:10px 0;
+    }
+    
+    </style>
+</html>
